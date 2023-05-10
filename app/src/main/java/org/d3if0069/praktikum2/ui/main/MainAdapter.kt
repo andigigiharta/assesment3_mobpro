@@ -1,9 +1,11 @@
-package org.d3if0069.praktikum2
+package org.d3if0069.praktikum2.ui.main
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
+import org.d3if0069.praktikum2.Hewan
+import org.d3if0069.praktikum2.R
 import org.d3if0069.praktikum2.databinding.ListItemBinding
 
 
