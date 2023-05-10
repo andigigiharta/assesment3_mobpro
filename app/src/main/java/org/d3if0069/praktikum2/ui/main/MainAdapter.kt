@@ -9,10 +9,17 @@ import org.d3if0069.praktikum2.R
 import org.d3if0069.praktikum2.databinding.ListItemBinding
 
 
-class MainAdapter(private val data: List<Hewan>) :
-        RecyclerView.Adapter<MainAdapter.ViewHolder>() {
+class MainAdapter : RecyclerView.Adapter<MainAdapter.ViewHolder>() {
 
-        class ViewHolder(
+    private val data = mutableListOf<Hewan>()
+    fun updateData(newData: List<Hewan>) {
+        data.clear()
+        data.addAll(newData)
+        notifyDataSetChanged()
+    }
+
+
+    class ViewHolder(
         private val binding: ListItemBinding
     ) : RecyclerView.ViewHolder(binding.root) {
         fun bind(hewan: Hewan) = with(binding) {
