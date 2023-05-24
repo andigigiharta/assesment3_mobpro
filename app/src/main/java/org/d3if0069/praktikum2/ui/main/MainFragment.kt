@@ -11,6 +11,7 @@ import androidx.recyclerview.widget.RecyclerView
 import org.d3if0069.praktikum2.Hewan
 import org.d3if0069.praktikum2.R
 import org.d3if0069.praktikum2.databinding.FragmentMainBinding
+import org.d3if0069.praktikum2.network.ApiStatus
 
 class MainFragment : Fragment() {
     private val viewModel: MainViewModel by lazy {
@@ -35,6 +36,23 @@ class MainFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         viewModel.getData().observe(viewLifecycleOwner) {
             myAdapter.updateData(it)
+        }
+        viewModel.getStatus().observe(viewLifecycleOwner) {
+            updateProgress(it)
+        }
+    }
+    private fun updateProgress(status: ApiStatus) {
+        when (status) {
+            ApiStatus.LOADING -> {
+                binding.progressBar.visibility = View.VISIBLE
+            }
+            ApiStatus.SUCCESS -> {
+                binding.progressBar.visibility = View.GONE
+            }
+            ApiStatus.FAILED -> {
+                binding.progressBar.visibility = View.GONE
+                binding.networkError.visibility = View.VISIBLE
+            }
         }
     }
 }

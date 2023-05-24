@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">praktikum2</string>
     <string name="message">%1$s diklik!</string>
+    <string name="koneksi_error">koneksi error</string>
 </resources>
