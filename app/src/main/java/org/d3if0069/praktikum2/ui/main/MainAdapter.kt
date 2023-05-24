@@ -25,7 +25,7 @@ class MainAdapter : RecyclerView.Adapter<MainAdapter.ViewHolder>() {
         fun bind(hewan: Hewan) = with(binding) {
             namaTextView.text = hewan.nama
             latinTextView.text = hewan.namaLatin
-            imageView.setImageResource(hewan.imageResId)
+            imageView.setImageResource(R.drawable.angsa)
 
             root.setOnClickListener {
                 val message = root.context.getString(R.string.message, hewan.nama)
