@@ -2,4 +2,6 @@
     <string name="app_name">praktikum2</string>
     <string name="message">%1$s diklik!</string>
     <string name="koneksi_error">koneksi error</string>
+    <string name="channel_name">Updater</string>
+    <string name="channel_desc">Update data hewan otomatis</string>
 </resources>
