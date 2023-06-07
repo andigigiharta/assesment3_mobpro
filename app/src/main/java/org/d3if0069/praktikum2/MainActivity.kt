@@ -11,6 +11,8 @@ class MainActivity : AppCompatActivity() {
 
     companion object {
         const val CHANNEL_ID = "updater"
+        const val PERMISSION_REQUEST_CODE = 1
+
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
